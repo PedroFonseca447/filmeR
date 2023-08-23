@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyles } from './styles/globals'
+import { theme } from './styles/theme'
 
 function App() {
   return(
-  <h1>Filmer</h1>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles></GlobalStyles>
+      <h1>Filmer</h1></ThemeProvider>
+
+  
   )
 }
 
