@@ -1,10 +1,13 @@
-import { FaBars, FaHome, FaRegistered } from "react-icons/fa"
+import { FaBars, FaHome, FaRegUser } from "react-icons/fa"
 import Logo from "../../assets/logo.png"
 import { Button } from "../Button"
 import * as Styles from "./styles"
 import { Link } from "../Link"
+import { useNavigate } from "react-router-dom"
+import { ButtonVariants } from "../Button/types"
 
 export function Header() {
+    const navigate = useNavigate();
   return (
     <Styles.Container>
       <div>
@@ -15,9 +18,15 @@ export function Header() {
           <Link to = "/"><FaHome></FaHome> Home</Link>
           <Link to = "/wishlist"> <FaBars></FaBars>  Minha lista</Link>         
           
-          <Link to ="/login"><FaRegistered></FaRegistered></Link>
+          
       </div>
-
+          
+          <Button type="button"
+                  variant={ButtonVariants.Tertiary}
+                  onClick={() => navigate("/login")}
+          >
+            <FaRegUser></FaRegUser>
+          </Button>
       <form className="search-wrapper">
         <input
           type="text"

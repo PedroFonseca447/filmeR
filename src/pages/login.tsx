@@ -1,12 +1,13 @@
-import { ThemeProvider } from "styled-components";
-import { theme } from "../styles/theme";
-import { GlobalStyles } from "../styles/globals";
-
+import * as Styles from "../styles/pages/Home"
 export function Login(){
     return(
       
-        
-            <h1>LOGIN</h1>
+            <Styles.Container>
+                <div className="login">
+                    <h1>Login</h1>
+                </div>
+            </Styles.Container>
+            
         
        
     )

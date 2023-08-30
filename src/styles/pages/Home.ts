@@ -68,6 +68,10 @@ export const Container = styled.main`
           margin-top: 0;
         }
       }
-    }
+    }  
   }
-`
+  .login{
+    
+    margin: 100px;
+    }  
+` 
