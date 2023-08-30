@@ -4,14 +4,14 @@ import { theme } from './styles/theme'
 import { Home } from './pages/home'
 import { Header } from './components/Header'
 import { Button } from './components/Button'
+import { AppRoutes } from './routes'
 
 
 function App() {
   return(
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <Home></Home>
-        <Header></Header>
+        <AppRoutes></AppRoutes>
       </ThemeProvider>
 
   
